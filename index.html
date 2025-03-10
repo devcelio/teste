@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Inclusão de dependências -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script defer src="js/core/alpine.min.js"></script>
-    <script src="js/core/navigo.min.js"></script>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Inclusão de dependências -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <script defer src="js/core/alpine.min.js"></script> -->
+    <script src="js/core/navigo.min.js"></script>
+    <script src="js/core/handlebars.min.js"></script>
+    <script src="js/loaderUtils.js"></script>
+    
     <title>Document</title>
 </head>
-<body>
-    <nav>
-        <a href='/' data-navigo>Home</a>
-        <a href='#/products'>Products</a>
-        <a href='#/products/asdas'>Products</a>
-    </nav>
-    <div id="app"></div>
-    <script defer src="js/routes.js"></script>    
-
-</body>
+<body class="vh-100">
+    
+    <div id="app" class="h-100"></div>
+    <script defer src="js/routes.js"></script>
+    <script src="js/core/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

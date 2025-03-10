@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Inclusão de dependências -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script defer src="js/core/alpine.min.js"></script>
+    <script defer src="js/core/router.js"></script>
+    <script defer src="js/routes.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a onclick="router.navigate('/')">Home</a>
+        <a onclick="router.navigate('/products')">Products</a>
+        <a onclick="router.navigate('/404.html')">404</a>
+    </nav>
+    <div id="app"></div>
+
+</body>
+</html>

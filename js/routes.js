@@ -3,7 +3,7 @@ const router = new Navigo("/", { hash: true });
 
 router
   .on({
-    "": () => {
+    "/": () => {
       loadPage(router, "/pages/home.html", { name: "Hello" });
     },
     "/produtos": () => {

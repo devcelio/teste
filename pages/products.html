@@ -1,1 +1,31 @@
-{{> navbar}}
+<div class="h-100 d-flex flex-column">
+    {{> navbar}}
+
+    <div class="container-fluid">
+        <div class="flex-grow-1 d-flex flex-column">
+            <div class="row p-0 p-md-5 flex-grow-1 d-flex flex-row">
+                
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="row row-cols-2 row-cols-md-2 g-3">
+                        {{#each PRODUTOS}}
+                        {{#unless @first}} <!-- Skip first product (already featured) -->
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <div class="ratio" style="aspect-ratio: 4 / 3;">
+                                    <img src="{{this.imagem}}" class="card-img-top object-fit-cover" alt="{{this.nome}}">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{this.nome}}</h5>
+                                    <p class="card-text">{{this.descricao}}</p>
+                                    <a href="#" class="btn btn-outline-primary">Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/unless}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

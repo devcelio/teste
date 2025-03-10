@@ -16,10 +16,10 @@ async function loadPage(pagePath) {
 
 router
   .on({
-    "/": () => {
+    "/teste/": () => {
       loadPage("/pages/home.html");
     },
-    "/products": () => {
+    "/teste/products": () => {
       loadPage("/pages/products.html");
     },
   })

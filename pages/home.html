@@ -1,25 +1,68 @@
 <div class="h-100 d-flex flex-column">
     {{> navbar}}
-    <div class="container-fluid">
-        <div class="flex-grow-1 d-flex flex-column">
-            <div class="row p-0 p-md-5 flex-grow-1">
-                <div class="col-12 col-md-6 order-md-last mb-4 mb-md-0">
+    <div class="container-fluid p-md-5">
+        <div class="flex-grow-1 d-flex flex-column" style="gap: 44px">
+            <div class="row p-0 flex-grow-1 align-items-center">
+                <!-- Imagem de destaque do produto -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <div class="ratio ratio-4x3">
-                        <img class="object-fit-cover" src="assets/figure.jpg"/>
+                        <img class="object-fit-cover" src="assets/figure.jpg" alt="Imagem de Álcool em Gel"/>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex flex-column">
-                    <h2 class="display-1 text-purple mb-4">Bem-vindo ao nosso site!</h2>
-                    <p class="fs-3 text-justify mb-1">
-                        Descubra nossos produtos inovadores, desenvolvidos por especialistas em química. Oferecemos desde reagentes especializados até soluções personalizadas para otimizar projetos e processos na ciência e na indústria.
+
+                <!-- Seção de introdução e descrição -->
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                    <h2 class="display-2 text-primary mb-4">Inovação em Higiene e Cuidado</h2>
+                    <p class="fs-4 text-muted mb-4">
+                        Desenvolvemos soluções de higiene e cuidado com a mais alta qualidade e eficácia, incluindo o nosso Álcool em Gel, ideal para proteger sua saúde e a de todos ao seu redor. 
+                    </p>
+                    <p class="fs-5 text-justify mb-5">
+                        Com formulação antibacteriana e hipoalergênica, nosso produto é perfeito para manter as mãos limpas e livres de germes, proporcionando segurança e praticidade em qualquer momento.
                     </p>
 
-                    <div class="text-center mt-5">
-                        <button class="btn btn-primary">Conhecer Produtos</button>
+                    <!-- Botão para conhecer mais sobre os produtos -->
+                    <div class="text-center mt-4">
+                        <button class="btn btn-lg btn-primary" onclick="router.navigate('/produtos/')">Veja Nossos Produtos</button>
                     </div>
                 </div>
             </div>
 
+            <!-- Seção de benefícios (opcional) -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center text-primary">Por que escolher nossos produtos?</h3>
+                    <div class="row mt-4">
+                        <div class="col-12 col-md-4">
+                            <div class="card shadow-lg h-100 p-4">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-primary">Eficácia Comprovada</h5>
+                                    <p class="card-text">Testado para garantir proteção contra germes e bactérias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="card shadow-lg h-100 p-4">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-primary">Fórmula Hipoalergênica</h5>
+                                    <p class="card-text">Segura para todos os tipos de pele, incluindo as mais sensíveis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-4">
+                            <div class="card shadow-lg h-100 p-4">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-primary">Sustentabilidade</h5>
+                                    <p class="card-text">Produzido com responsabilidade, garantindo o mínimo impacto ambiental.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>

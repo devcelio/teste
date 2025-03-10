@@ -1,0 +1,89 @@
+<div class="h-100 d-flex flex-column">
+    <!-- Navbar -->
+    {{> navbar}}
+
+    <!-- Container principal -->
+    <div class="container p-md-5">
+        <div class="flex-grow-1 d-flex flex-column" style="gap: 44px">
+
+            <!-- Seção de detalhes do produto -->
+            <div class="card row border-0 p-0 flex-grow-1 rounded-lg align-items-center">
+                <div class="card-body row">
+                    <!-- Imagem do Produto -->
+                    <div class="col-12 col-md-6 mb-4 mb-md-0 order-md-last">
+                        <div style="aspect-ratio: 16/9; height: 300px;">
+                            <img class="object-fit-contain w-100 h-100" src="{{produto.imagem}}" alt="{{produto.nome}}">
+                        </div>
+                    </div>
+    
+                    <!-- Descrição e informações do produto -->
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                        <h1 class="text-primary">{{produto.nome}} - {{produto.fragrancia}}</h1>
+                        <p class="fs-4 text-muted mb-4">{{produto.descricao}}</p>
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-6">
+                                <h3 class="text-primary">Indicações</h3>
+                                <p>{{produto.indicacoes}}</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="text-primary">Modo de Uso</h3>
+                                <p>{{produto.modoUso}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Composição dentro de um Card com Bullets -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-lg p-4">
+                        <div class="card-body">
+                            <h3 class="text-primary">Composição</h3>
+                            <ul class="list" style="list-style-type: disc; padding-left: 20px;">
+                                {{#each produto.composição}}
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>{{this}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Advertências dentro de um Card com fundo alaranjado -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-lg p-4" style="background-color: #fff3cd;">
+                        <div class="card-body">
+                            <h3 class="text-warning">Advertências</h3>
+                            <ul class="list" style="list-style-type: disc; padding-left: 20px;">
+                                {{#each produto.advertencias}}
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-exclamation-circle-fill text-warning me-3"></i>
+                                        {{this}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Seção de Observações dentro de um Card -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-primary">Observações</h3>
+                    <div class="card shadow-lg p-4">
+                        <div class="card-body">
+                            <p>{{produto.observacoes}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

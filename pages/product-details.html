@@ -1,23 +1,18 @@
 <div class="h-100 d-flex flex-column">
-    <!-- Navbar -->
     {{> navbar}}
 
-    <!-- Container principal -->
-    <div class="container p-md-5">
+    <div class="container p-lg-5">
         <div class="flex-grow-1 d-flex flex-column" style="gap: 44px">
 
-            <!-- Seção de detalhes do produto -->
             <div class="card row border-0 p-0 flex-grow-1 rounded-lg align-items-center">
                 <div class="card-body row">
-                    <!-- Imagem do Produto -->
-                    <div class="col-12 col-md-6 mb-4 mb-md-0 order-md-last">
-                        <div style="aspect-ratio: 16/9; height: 300px;">
+                    <div class="col-12 col-lg-6 mb-4 mb-md-0 order-lg-last">
+                        <div class="w-sm-100" style="aspect-ratio: 16/9;">
                             <img class="object-fit-contain w-100 h-100" src="{{produto.imagem}}" alt="{{produto.nome}}">
                         </div>
                     </div>
     
-                    <!-- Descrição e informações do produto -->
-                    <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
                         <h1 class="text-primary">{{produto.nome}} - {{produto.fragrancia}}</h1>
                         <p class="fs-4 text-muted mb-4">{{produto.descricao}}</p>
                         <div class="row mb-4">
@@ -34,7 +29,7 @@
                 </div>
             </div>
 
-            <!-- Seção de Composição dentro de um Card com Bullets -->
+
             <div class="row">
                 <div class="col-12">
                     <div class="card shadow-lg p-4">
@@ -52,7 +47,7 @@
                 </div>
             </div>
 
-            <!-- Seção de Advertências dentro de um Card com fundo alaranjado -->
+
             <div class="row">
                 <div class="col-12">
                     <div class="card shadow-lg p-4" style="background-color: #fff3cd;">
@@ -72,7 +67,6 @@
             </div>
 
 
-            <!-- Seção de Observações dentro de um Card -->
             <div class="row">
                 <div class="col-12">
                     <h3 class="text-primary">Observações</h3>

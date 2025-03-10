@@ -8,9 +8,10 @@ router
     "/produtos": () => {
       loadPage(router, "/pages/products.html", { PRODUTOS: PRODUTOS });
     },
-    "/produtos/:id": (params) => {
-      const product = PRODUTOS.find(p => p.id === params.id);
-      
+    "/produtos/:slug": (params) => {
+      const product = PRODUTOS.find((p) => p.slug === params.data.slug);
+      console.log(params.data.slug)
+      console.log(PRODUTOS[0].slug === params.slug)
       if (product) {
         loadPage(router, "/pages/product-details.html", { produto: product });
       } else {

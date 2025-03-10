@@ -35,11 +35,9 @@
                     <div class="card shadow-lg p-4">
                         <div class="card-body">
                             <h3 class="text-primary">Composição</h3>
-                            <ul class="list" style="list-style-type: disc; padding-left: 20px;">
+                            <ul class="list">
                                 {{#each produto.composição}}
-                                    <li class="mb-2">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>{{this}}
-                                    </li>
+                                    <li class="mb-2">{{this}}</li>
                                 {{/each}}
                             </ul>
                         </div>
@@ -53,12 +51,9 @@
                     <div class="card shadow-lg p-4" style="background-color: #fff3cd;">
                         <div class="card-body">
                             <h3 class="text-warning">Advertências</h3>
-                            <ul class="list" style="list-style-type: disc; padding-left: 20px;">
+                            <ul class="list" >
                                 {{#each produto.advertencias}}
-                                    <li class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-exclamation-circle-fill text-warning me-3"></i>
-                                        {{this}}
-                                    </li>
+                                    <li class="mb-2">{{this}}</li>
                                 {{/each}}
                             </ul>
                         </div>

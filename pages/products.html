@@ -6,21 +6,20 @@
             <div class="row p-0 p-md-5 flex-grow-1 d-flex flex-row">
                 
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="row row-cols-2 row-cols-md-2 g-3">
+                    <div class="row row-cols-2 row-cols-md-2 g-4">
                         {{#each PRODUTOS}}
-                        {{#unless @first}} <!-- Skip first product (already featured) -->
                         <div class="col">
-                            <div class="card h-100 shadow-sm">
+                            <div class="card h-100 border-0 shadow-lg">
                                 <div class="ratio" style="aspect-ratio: 4 / 3;">
                                     <img src="{{this.imagem}}" class="card-img-top object-fit-cover" alt="{{this.nome}}">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">{{this.nome}}</h5>
+                                    <p>{{this.fragrancia}}</p>
                                     <a class="btn btn-outline-primary" href="/produtos/{{this.slug}}" data-navigo>Detalhes</a>
                                 </div>
                             </div>
                         </div>
-                        {{/unless}}
                         {{/each}}
                     </div>
                 </div>

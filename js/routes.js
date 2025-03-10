@@ -1,8 +1,11 @@
 const router = new Navigo("/", { hash: true });
 
+const PREFIX = '/teste/'
+// const PREFIX = ''
+
 async function loadPage(pagePath) {
   try {
-    const response = await fetch(pagePath);
+    const response = await fetch(PREFIX + pagePath);
     if (!response.ok) throw new Error("Failed to load page");
     const html = await response.text();
     document.querySelector("#app").innerHTML = html;

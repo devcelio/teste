@@ -13,6 +13,7 @@ async function loadPage(pagePath) {
   }
 }
 
+
 router
   .on({
     "/": () => {

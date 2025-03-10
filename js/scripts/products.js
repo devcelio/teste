@@ -20,7 +20,7 @@ function handleBindProductSerch() {
 
     searchButton.addEventListener("click", function () {
         const query = searchInput.value.trim();
-        router.navigate(`produtos?search=${encodeURIComponent(query)}`);
+        router.navigate(`/produtos?search=${encodeURIComponent(query)}`);
     });
 
     searchInput.addEventListener("keypress", function (e) {

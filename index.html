@@ -7,17 +7,17 @@
     <!-- Inclusão de dependências -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script defer src="js/core/alpine.min.js"></script>
-    <script defer src="js/core/router.js"></script>
-    <script defer src="js/routes.js"></script>    
+    <script src="js/core/navigo.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <nav>
-        <a onclick="router.navigate('/')">Home</a>
-        <a onclick="router.navigate('/products')">Products</a>
-        <a onclick="router.navigate('/404.html')">404</a>
+        <a href='/' data-navigo>Home</a>
+        <a href='/#/products'>Products</a>
+        <a href='/#/products/asdas'>Products</a>
     </nav>
     <div id="app"></div>
+    <script defer src="js/routes.js"></script>    
 
 </body>
 </html>

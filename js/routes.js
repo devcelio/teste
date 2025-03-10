@@ -1,6 +1,6 @@
 const router = new Navigo("/", { hash: true });
 
-const PREFIX = '/teste/'
+const PREFIX = '/teste'
 // const PREFIX = ''
 
 async function loadPage(pagePath) {

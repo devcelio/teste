@@ -19,7 +19,7 @@ const PRODUTOS = [
         "Em caso de irritação, suspender o uso e procurar orientação médica."
       ],
       observacoes: "Manter fora do alcance de crianças e animais",
-      imagem: "assets/product-0-main.jfif",
+      imagem: PREFIX + "/assets/product-0-main.jfif",
     },
     {
         nome: "Álcool em gel",
@@ -41,8 +41,6 @@ const PRODUTOS = [
           "Em caso de irritação, suspender o uso e procurar orientação médica."
         ],
         observacoes: "Manter fora do alcance de crianças e animais",
-        imagem: "assets/product-0-main.jfif",
+        imagem: PREFIX + "assets/product-0-main.jfif",
       },
-
 ];
-  

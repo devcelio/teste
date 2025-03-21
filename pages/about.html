@@ -1,0 +1,74 @@
+<div class="h-100 d-flex flex-column">
+    {{> navbar }}
+
+    <div class="container-fluid p-md-5">
+        <div class="flex-grow-1 d-flex flex-column" style="gap: 50px">
+            <!-- Seção de Cabeçalho -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                    <h2 class="display-2 text-primary mb-4">
+                        Sobre Nós
+                    </h2>
+                    <p class="fs-4 text-muted mb-4">
+                        Nossa missão é oferecer soluções de higiene e cuidado de alta qualidade, promovendo saúde e bem-estar para todos.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <img class="img-fluid" src="{{ logo }}" alt="Logo da Empresa" style="max-width: 200px;">
+                </div>
+            </div>
+
+            <!-- Seção de Contato -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="text-center text-primary mb-5">Entre em Contato</h3>
+                    <div class="row justify-content-center">
+                        {{#if telefone}}
+                            <div class="col-12 col-md-4">
+                                <div class="card shadow-sm h-100 p-4 border-0 text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Telefone</h5>
+                                        <p class="card-text">
+                                            <a href="tel:{{ telefone }}" class="text-decoration-none text-dark">
+                                                {{ telefone }}
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/if}}
+
+                        <div class="col-12 col-md-4">
+                            <div class="card shadow-sm h-100 p-4 border-0 text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Redes Sociais</h5>
+                                    <div class="d-flex justify-content-center gap-3">
+                                        <label>
+                                            <i class="bi bi-instagram"></i> 
+                                            <a href="{{ social.instagram }}" class="text-primary fs-4" target="_blank">
+                                                Instagram
+                                            </a>
+                                        </label>
+                                        <!-- <a href="{{ social.facebook }}" class="text-primary fs-4" target="_blank">
+                                            <i class="bi bi-facebook"></i>
+                                        </a>
+                                        <a href="{{ social.linkedin }}" class="text-primary fs-4" target="_blank">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão de Voltar -->
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary" onclick="router.navigate('/')">
+                            Voltar para Início
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,32 +1,10 @@
-const router = new Navigo("/", { hash: true });
+import { Home, About, ProductDetail, ProductsGallery, PageNotFound } from "./views.js";
 
-router
-    .on({
-        "": () => {
-            loadPage(router, "/pages/home.html", { name: "Hello" });
-        },
-        "/produtos": (params) => {
-            const queryParams = Object.fromEntries(new URLSearchParams(params.queryString));
-            const filteredProducts = handleProductFilter(PRODUTOS, queryParams.search);
-            loadPage(
-                router,
-                "/pages/products.html",
-                { PRODUTOS: filteredProducts, searchQuery: queryParams.search || '' },
-                () => {
-                    handleBindProductSerch();
-                }
-            );
-        },
-        "/produtos/:slug": (params) => {
-            const product = PRODUTOS.find((p) => p.slug === params.data.slug);
-            if (product) {
-                loadPage(router, "/pages/product-details.html", {
-                    produto: product,
-                });
-            } else {
-                loadPage(router, "/pages/404.html");
-            }
-        },
-    })
-    .notFound(() => loadPage(router, "/pages/404.html"))
-    .resolve();
+router.on({
+    "": Home,
+    "/sobre/": About,
+    "/produtos": ProductsGallery,
+    "/produtos/:slug": ProductDetail,
+})
+.notFound(PageNotFound)
+.resolve();

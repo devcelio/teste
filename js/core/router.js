@@ -1,0 +1,1 @@
+const router = new Navigo("/", { hash: true });

@@ -1,5 +1,7 @@
-const DEVELOPMENT = !location.host.includes("github.io");
-const PREFIX = DEVELOPMENT ? "" : "/teste";
+import { COMPANY } from "../database.js";
+
+export const DEVELOPMENT = !location.host.includes("github.io");
+export const PREFIX = DEVELOPMENT ? "" : "/teste";
 
 async function loadComponents(components = []) {
     try {
@@ -27,10 +29,10 @@ async function loadComponents(components = []) {
     }
 }
 
-async function loadPage(router, pagePath, data = {}, after) {
+export async function loadPage(router, pagePath, data = {}, after) {
     try {
         const partialData = [
-            { name: "navbar", path: "/components/navbar.hbs" },
+            { name: "navbar", path: "/components/navbar.hbs", data: COMPANY },
         ];
 
         await loadComponents(partialData);

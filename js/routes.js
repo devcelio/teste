@@ -1,7 +1,7 @@
 import { Home, About, ProductDetail, ProductsGallery, PageNotFound } from "./views.js";
 
 router.on({
-    "": Home,
+    "/": Home,
     "/sobre/": About,
     "/produtos": ProductsGallery,
     "/produtos/:slug": ProductDetail,

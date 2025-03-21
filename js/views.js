@@ -2,6 +2,10 @@ import { COMPANY, PRODUTOS } from "./database.js";
 import { loadPage } from "./utils/page-utils.js";
 import { handleBindProductSerch, handleProductFilter } from "./view-utils/produt-utils.js";
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.title = COMPANY.nome    
+})
+
 export function Home() {
     loadPage(router, "/pages/home.html");
 }

@@ -2,7 +2,7 @@ import { Home, About, ProductDetail, ProductsGallery, PageNotFound } from "./vie
 
 router.on({
     "/": Home,
-    "/sobre/": About,
+    "/sobre": About,
     "/produtos": ProductsGallery,
     "/produtos/:slug": ProductDetail,
 })
